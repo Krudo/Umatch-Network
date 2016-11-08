@@ -1,0 +1,578 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Isotope</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="js/jquery.isotope.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //var $container = $('.portfolioContainer');
+
+            //$container.isotope({
+            //    getSortData: {
+            //        color: '[data-color]',
+            //        number: '.number parseInt'
+            //    },
+            //    // sort by color then number
+            //    sortBy: ['color', 'number']
+            //});
+
+            //setTimeout(function () {
+            //    $container.isotope('shuffle');
+            //}, 2000);
+            //setTimeout(function () {
+            //    $container.isotope({ sortBy: number });
+            //}, 4000);
+
+	        $('.standard').hover(
+		        function(){
+			        $(this).find('.caption').show();
+		        },
+		        function(){
+			        $(this).find('.caption').hide();
+		        }
+	        );
+	        $('.fade').hover(
+		        function(){
+			        $(this).find('.caption').fadeIn(250);
+		        },
+		        function(){
+			        $(this).find('.caption').fadeOut(250);
+		        }
+	        );
+	        $('.slide').hover(
+		        function(){
+			        $(this).find('.caption').slideDown(250);
+		        },
+		        function(){
+			        $(this).find('.caption').slideUp(250);
+		        }
+	        );
+
+	       // $('.portfolioContainer').isotope('shuffle');
+        });
+
+            </script>
+</head>
+<body>
+
+    
+
+    
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <!--Web summit Logo-->
+                <svg class="websummit-logo new-logo" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 323.6 146.19" style="width: 165px; margin-left: 0;">
+                    &gt;
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #4e4f4f;
+                            }
+
+                            .cls-2 {
+                                fill: #1c1c4b;
+                                isolation: isolate;
+                            }
+
+                            .cls-3 {
+                                fill: #59c5c7;
+                            }
+
+                            .cls-4 {
+                                fill: #e90d7f;
+                            }
+                        </style>
+                    </defs>
+                    <title>Websummit Logo</title>
+                    <path id="&#8203;_Compound_Path_&#8203;" data-name="<Compound Path>" class="cls-1 websummit_text" d="M1.83,37.14H7.33S18.26,70,19.83,74.92H20c1.57-4.76,12.94-37.77,12.94-37.77h3.58S47.89,70.07,49.46,74.83h.17c1.49-4.76,12.41-37.68,12.41-37.68h5.33l-15.12,45H47.1s-11-32-12.32-36H34.6c-1.31,4-12.33,36-12.33,36H16.95Zm75.83,24c.88,10.2,8.17,16.52,18.37,16.52a24.06,24.06,0,0,0,14.5-5v5.62a29.25,29.25,0,0,1-14.85,4c-13.27,0-23.11-9.14-23.11-22.58s9.67-22.58,21.35-22.58c10.46,0,19.16,7.46,19.16,20.3,0,1.32-.09,2.63-.18,3.68Zm.18-4.3H108c-.26-11.61-8.44-15-14.24-15C86.53,41.79,79.24,46.8,77.83,56.82ZM123.69,14.2h5.18V41.88L129,42a22.15,22.15,0,0,1,13.71-4.83c11.69,0,20.83,9.05,20.83,22.14s-9.14,23-22.41,23a28.44,28.44,0,0,1-12.48-3l-5,2.82Zm17.66,63.53c10.46,0,17-8.08,17-18.19s-6.5-17.75-16.26-17.75a18.66,18.66,0,0,0-13.27,5.54V74.48A28.17,28.17,0,0,0,141.35,77.73ZM1.83,128.63a42.57,42.57,0,0,0,19.48,5.68c4.26,0,6.8-1.12,6.8-3.85,0-3.86-5.58-3.45-13.09-5.38-9.44-2.34-15-6.29-15-14.51C.1,100,9.44,94,21.81,94c6,0,13.39,1.21,19.07,4v13.28a42.08,42.08,0,0,0-18.77-5.38c-4.06,0-6.49,1.22-6.49,3.55,0,3.65,5.38,3.35,12.78,5.18,9.54,2.33,15.32,6,15.32,14.6-.1,11-9.64,16.94-22.42,16.94-6,0-13.59-1.21-19.48-4.06Zm49.07-2.73V95.16H66.31v28.4c0,3.65.61,5.78,1.93,7.2A7.1,7.1,0,0,0,73.72,133c3.86,0,7.71-2.13,10.14-4.47V95.16H99.29l0,50.81H84l0-5.57-.2-.1a22.48,22.48,0,0,1-15.22,5.88c-5.78,0-10.15-2-13-5C52.42,137.87,50.89,133.3,50.89,125.9ZM263.59,146H279V95.16H263.59ZM295,126.3V107.94h-8.12V95.16H295v-13l15.42-2.64V95.16H323.6v12.78H310.41v16.74c0,4.87,1.12,8.52,5.78,8.52a17.85,17.85,0,0,0,7.41-2v12.28c-2.33,1.52-6.9,2.73-11.26,2.73-5.07,0-9.84-1.62-13-5C296.72,138.37,295,134.22,295,126.3ZM123.28,99.62l0-4.6H108.41l0,51h14.89V111.73c2.86-2.18,6.13-4.16,9.76-4.16a7.86,7.86,0,0,1,5.76,2.18c1.35,1.45,2.23,3.53,2.23,7V146h14.89s0-33.42-.13-34.15a16,16,0,0,1,10.05-4.26c2.07,0,4.8.63,6.25,2.18a9.1,9.1,0,0,1,2.72,7V146H189.7V111.73c2.86-2.18,5.93-4.16,9.56-4.16a8.09,8.09,0,0,1,5.86,2.18c1.35,1.45,2.33,3.53,2.33,7V146h14.89s-.22-33.42-.32-34.15c2.7-2.39,6.32-4.26,10-4.26a6.17,6.17,0,0,1,5,2.18c1.25,1.35,1.44,3.12,1.44,7V146H255V114.11c0-7.27-1.49-11.73-4.71-15-3-3.11-7.49-5.08-13.2-5.08-6.43,0-12.46,2.38-18,7.26-3-5.09-9.34-7.26-14.84-7.26-7.87,0-14.25,4.12-18.23,7.4a14.5,14.5,0,0,0-1.83-2.32C181.19,96,176.73,94,171,94c-6.43,0-12.45,2.38-18,7.26-3-5.09-9.34-7.29-14.84-7.29A22.75,22.75,0,0,0,123.28,99.62Z"></path>
+                    <polygon id="SVGID" class="cls-2 arrow_3" points="225.83 0 215.21 18.27 225.83 36.64 236.35 18.44 225.83 0"></polygon>
+                    <polygon id="SVGID-2" data-name="SVGID" class="cls-3 arrow_2" points="209.94 9.16 167.57 82.44 199.35 82.44 225.83 36.64 209.94 9.16"></polygon>
+                    <polygon id="SVGID-3" data-name="SVGID" class="cls-4 arrow_1" points="199.35 82.44 241.72 9.16 284.07 82.44 199.35 82.44"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Yahal Zlika Matches</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-9">
+                <div class="portfolioFilter">
+                    <a href="#" data-filter="*" class="current">All Matches</a>
+                    <a href="#" data-filter=".high">High</a>
+                    <a href="#" data-filter=".medium">Medium</a>
+                    <a href="#" data-filter=".low">Low</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <!--<img src="images/Magma/Zlika.jpg" />-->
+                <div class="section-content attendee-popup" id="attendee-popup-625892" style="max-width: 340px; margin: 0 auto;">
+
+                    <div class="item-image">
+                        <img alt="" src="https://s3.amazonaws.com/bouncer-prod/madmin_attendees/65332/medium/65332?1470234829" style="width: 100%;">
+                    </div>
+                    <h3 style="text-align:center">Yahal Zilka</h3>
+                    <p style="text-align:center">Co-Founder - Magma Venture Partners</p>
+                    <p style="text-align:center;font-size:medium;">Mr. Yahal Zilka co-founded Magma Venture Partners. Since 1999, Yahal served as co-Managing Partner of Magma, and positioned Magma as a major player in the New Media space.</p>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="portfolioContainer">
+
+                    <figure class="slide high medium">
+                        <div class="caption">
+                            <h3>CEO/President</h3>
+                            <h3>KiraKira</h3>
+                            <p></p>
+                            <h3><b class="numPer">96%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/1.jpg" alt="Meir Krudo" />
+                        <h4>Suz Somersall</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high medium">
+                        <div class="caption">
+                            <h3>Co-Founder</h3>
+                            <h3>8Stem</h3>
+                            <p></p>
+                            <h3><b class="numPer">94%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/2.jpg" />
+                        <h4>Adam Farish</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>Co-Founder</h3>
+                            <h3>Superfly</h3>
+                            <p></p>
+                            <h3><b class="numPer">94%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/3.jpg" />
+                        <h4>Jonathan Mayers</h4>
+                    </figure>
+                    <!--/.grid-block-->
+                    
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>Engineering</h3>
+                            <h3>EventGeek</h3>
+                            <p></p>
+                            <h3><b class="numPer">93%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/4.png" />
+                        <h4>Pavlo Shabat</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>Manager</h3>
+                            <h3>Symphony</h3>
+                            <p></p>
+                            <h3><b class="numPer">93%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/5.jpg" />
+                        <h4>Wesley Smith</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>CEO</h3>
+                            <h3>Unfold</h3>
+                            <p></p>
+                            <h3><b class="numPer">90%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/6.jpg" />
+                        <h4>Lucia Dubacova</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>Manager</h3>
+                            <h3>WorkHands</h3>
+                            <p></p>
+                            <h3><b class="numPer">90%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/7.jpeg" />
+                        <h4>Jacob Hash</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>CEO</h3>
+                            <h3>Bloomojo</h3>
+                            <p></p>
+                            <h3><b>89%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/8.jpg" />
+                        <h4>Victoria Saucier</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>Founder</h3>
+                            <h3>Technori</h3>
+                            <p></p>
+                            <h3><b>87%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/9.jpg" />
+                        <h4>Seth Kravitz</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>VP</h3>
+                            <h3>Epiphyte</h3>
+                            <p></p>
+                            <h3><b>86%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/10.jpg" />
+                        <h4>Gabrielle Patrick</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>Co-Founder</h3>
+                            <h3>Ticket Fairy</h3>
+                            <p></p>
+                            <h3><b>86%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/11.jpg" />
+                        <h4>Ritesh Patel</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>Manager</h3>
+                            <h3>Frank</h3>
+                            <p></p>
+                            <h3><b>85%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/12.jpeg" />
+                        <h4>Francisca Pinto</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>VP</h3>
+                            <h3>Luma Legacy</h3>
+                            <p></p>
+                            <h3><b>85%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/13.png" />
+                        <h4>Brigid Walsh</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>Developer</h3>
+                            <h3>Spotlight</h3>
+                            <p></p>
+                            <h3><b>84%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/14.jpg" />
+                        <h4>Ioana Vasilescu</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>CEO</h3>
+                            <h3>Payment.Ninja</h3>
+                            <p></p>
+                            <h3><b>83%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/15.jpg" />
+                        <h4>Daria Dubinina</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>CEO</h3>
+                            <h3>ROAR for Good</h3>
+                            <p></p>
+                            <h3><b>82%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/16.jpg" />
+                        <h4>Yasmine Mustafa</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>CEO</h3>
+                            <h3>Runway2Street</h3>
+                            <p></p>
+                            <h3><b>81%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/17.jpg" />
+                        <h4>Rathna Sharad</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide high">
+                        <div class="caption">
+                            <h3>CEO</h3>
+                            <h3>Tackl</h3>
+                            <p></p>
+                            <h3><b>80%</b></h3>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/Magma/18.jpg" />
+                        <h4>Tasha Choir</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide medium">
+                        <div class="caption">
+                            <h3>Co-Founder</h3>
+                            <h3>8Stem</h3>
+                            <p></p>
+                            <p><b>94%</b></p>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/61563.jpg" />
+                        <h4>Mike Schroepfer</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide medium">
+                        <div class="caption">
+                            <h3>Co-Founder</h3>
+                            <h3>8Stem</h3>
+                            <p></p>
+                            <p><b>94%</b></p>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/62188.jpg" />
+                        <h4>Mike Schroepfer</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide medium">
+                        <div class="caption">
+                            <h3>Co-Founder</h3>
+                            <h3>8Stem</h3>
+                            <p></p>
+                            <p><b>94%</b></p>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/63004.jpg" />
+                        <h4>Mike Schroepfer</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+                    <figure class="slide medium">
+                        <div class="caption">
+                            <h3>Co-Founder</h3>
+                            <h3>8Stem</h3>
+                            <p></p>
+                            <p><b>94%</b></p>
+                            <p><a href="#" class="learn-more">View Profile</a></p>
+                        </div>
+                        <img src="images/63727.jpg" />
+                        <h4>Mike Schroepfer</h4>
+                    </figure>
+                    <!--/.grid-block-->
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    <!--/.grid-container-->
+
+
+
+    <!--<ul class="rig portfolioContainer">
+        <li class="high">
+            <img src="images/61563.jpg" />
+            <h3>Image Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        </li>
+        <li class="high">
+            <img src="images/62188.jpg" />
+            <h3>Image Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        </li>
+        <li>
+            <img src="images/63004.jpg" />
+            <h3>Danny Cohen</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        </li>
+        <li>
+            <img src="images/63727.jpg" />
+            <h3>Image Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        </li>
+    </ul>-->
+
+    <!--<div class="portfolioContainer">
+
+        <div class="high">
+            <img src="images/61563.jpg" alt="image"/>
+        </div>
+
+        <div class="high">
+            <img src="images/62188.jpg" alt="image"/>
+        </div>
+
+        <div class="high">
+            <img src="images/63004.jpg" alt="image">
+        </div>
+
+        <div class="high">
+            <img src="images/63727.jpg" alt="image">
+        </div>
+
+        <div class="high">
+            <img src="images/63783.jpg" alt="image">
+        </div>
+
+        <div class="low">
+            <img src="images/64671.jpg" alt="image">
+        </div>
+
+        <div class="low">
+            <img src="images/65226.jpg" alt="image">
+        </div>
+
+        <div class="low">
+            <img src="images/65255.jpg" alt="image">
+        </div>
+
+        <div class="medium">
+            <img src="images/65285.jpg" alt="image">
+        </div>
+
+        <div class="medium">
+            <img src="images/65289.jpg" alt="image">
+        </div>
+
+        <div class="medium">
+            <img src="images/65332.jpg" alt="image">
+        </div>
+
+        <div class="medium">
+            <img src="images/65407.jpg" alt="image">
+        </div>
+
+        <div class="high">
+            <img src="images/65684.jpg" alt="image">
+        </div>
+
+    </div>-->
+
+    <script type="text/javascript">
+
+$(window).load(function(){
+    var $container = $('.portfolioContainer');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+        
+
+    });
+
+   
+    $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }, getSortData: {
+                number: '.numPer parseInt'
+            }
+         });
+         return false;
+    });
+
+    setTimeout(function () {
+        $container.isotope('shuffle');
+    }, 1000);
+    setTimeout(function () {
+        $container.isotope('shuffle');
+    }, 2000);
+    setTimeout(function () {
+        $container.isotope({ sortBy: 'number' });
+    }, 3000);
+
+});
+
+    </script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-21422990-1']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+    </script>
+
+</body>
+</html>

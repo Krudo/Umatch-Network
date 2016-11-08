@@ -1,0 +1,252 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>We collect data - Umatch</title>
+
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script src="js/jquery.history.js"></script>
+    <script src="js/jquery.rdfquery.core.min-1.0.js"></script>
+    <script src="js/dragdealer.js"></script>
+    <script src="js/d3.v2.min.js"></script>
+    <script src="js/vex.min.js"></script>
+    <script src="js/network-robert.js"></script>
+    <script src="js/network.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    <script src="data/semi-data.js"></script>
+    <!--script src="js/attendees.htm.js"></script-->
+
+
+    <script type="text/javascript">var fileNames = []; var metaNames = ['Abbey_Lincoln.meta', 'Artie_Shaw.meta', 'Benny_Golson.meta', 'Billy_Taylor_(jazz_bassist).meta', 'Buddy_DeFranco.meta', 'Buddy_Tate_(musician).meta', 'Buster_Williams.meta', 'Charles_Mingus.meta', 'Chico_Hamilton.meta', 'Clark_Terry.meta', 'Cozy_Cole.meta', 'Danny_Barker.meta', 'Dave_Brubeck.meta', 'Eddie_Marshall.meta', 'Etta_Jones.meta', 'Frank_Foster_(musician).meta', 'Gerald_Wiggins.meta', 'Gunther_Schuller.meta', 'J._J._Johnson.meta', 'Jimmy_Scott.meta', 'Joe_Williams_(jazz_singer).meta', 'Johnny_Griffin.meta', 'Lionel_Hampton.meta', 'Louie_Bellson.meta', 'Mary_Lou_Williams.meta', 'Melba_Liston.meta', 'Milt_Hinton.meta', 'Oscar_Peterson.meta', 'Ray_Drummond.meta', 'Roy_Eldridge.meta', 'Roy_Haynes.meta', 'Slide_Hampton.meta', 'Yusef_Lateef.meta'];</script>
+
+    <link rel="stylesheet" href="css/network.css">
+    <link rel="stylesheet" href="css/vex.css">
+    <link rel="stylesheet" href="css/vex-theme-os.css">
+    <link rel="stylesheet" href="css/attendees.css">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+    <style>
+        /*.graph-svg-component {
+            background-color: #002341;
+        }*/
+
+        #over img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Full Width Progress Bar */
+
+        #content, #content2, #content3, #content1, #content4 {
+            width: 250px;
+            height: 2px;
+            margin: 30px auto;
+            background: #333;
+        }
+
+        .fullwidth .expand {
+            width: 250px;
+            height: 2px;
+            margin: 2px 0;
+            background: #2187e7;
+            position: absolute;
+            box-shadow: 0px 0px 10px 1px #89c1f6;
+            -moz-animation: fullexpand 5s ease-out;
+            -o-animation: fullexpand 5s ease-out;
+            -webkit-animation: fullexpand 5s ease-out;
+            animation: fullexpand 5s ease-out;
+        }
+
+        @-moz-keyframes fullexpand {
+            0% {
+                width: 0px;
+            }
+
+            30% {
+                width: 30%;
+            }
+        }
+
+        @-webkit-keyframes fullexpand {
+            0% {
+                width: 0px;
+            }
+
+            30% {
+                width: 30%;
+            }
+        }
+
+        @keyframes fullexpand {
+            0% {
+                width: 0px;
+            }
+
+            30% {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    <a href="/"><img src="menu/logo.png"   id="logo"></a>
+    -->
+
+    <div id="header">
+        <button id="show-button" style="position:absolute;left:24px;top:200px; z-index=2" class="btn btn-success btn-lg" onclick="showConnections()">Umatch...</button>
+        <!--button style="position:absolute;left:24px;top:220px;" onclick="hideConnections()">Hide connections</button-->
+        <div id="u100_state0" class="panel_state" data-label="State1" style="visibility: inherit; position: relative;">
+            <div id="u100_state0_content" class="panel_state_content">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u101" class="ax_default box_1">
+                    <div id="u101_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u103" class="ax_default heading_1">
+                    <div id="u103_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u104" class="text">
+                        <p><span id="header-attendees">##,###</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u105" class="ax_default heading_1">
+                    <div id="u105_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u106" class="text">
+                        <p><span>Attendees</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u107" class="ax_default heading_1">
+                    <div id="u107_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u108" class="text">
+                        <p><span id="header-matches">#,###</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u109" class="ax_default heading_1">
+                    <div id="u109_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u110" class="text">
+                        <p><span>Matches</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u111" class="ax_default heading_1">
+                    <div id="u111_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u112" class="text">
+                        <p><span id="header-high">###</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u113" class="ax_default heading_1">
+                    <div id="u113_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u114" class="text">
+                        <p><span>High</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u115" class="ax_default heading_1">
+                    <div id="u115_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u116" class="text">
+                        <p><span id="header-medium">##</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u117" class="ax_default heading_1">
+                    <div id="u117_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u118" class="text">
+                        <p><span>Medium</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u119" class="ax_default heading_1">
+                    <div id="u119_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u120" class="text">
+                        <p><span id="header-low">#</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u121" class="ax_default heading_1">
+                    <div id="u121_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u122" class="text">
+                        <p><span>Low</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u123" class="ax_default heading_1">
+                    <div id="u123_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u124" class="text">
+                        <p><span id="header-meetings">###,###</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u125" class="ax_default heading_1">
+                    <div id="u125_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u126" class="text">
+                        <p><span>Meetings</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Image) -->
+                <div id="u127" class="ax_default image">
+                    <img id="u127_img" class="img " src="img/u36.png">
+                </div>
+
+                <!-- Unnamed (Image) -->
+                <div id="u129" class="ax_default image">
+                    <img id="u129_img" class="img " src="img/u129.png">
+                </div>
+
+                <!-- Unnamed (Image) -->
+                <div id="u131" class="ax_default image">
+                    <img id="u131_img" class="img " src="img/u38.png">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="over" style="position:absolute; width:100%; height:100%">
+
+        <img src="img/WS.png" />
+    </div>
+   
+
+
+    <!--
+    <a id="gephi" href="#" title="Downalod this network as a Gephi file.">
+      <img src="img/icon-gephi.png" title="Downalod this network as a Gephi file.">
+    </a>
+    -->
+
+</body>
+</html>
