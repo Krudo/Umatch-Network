@@ -83,8 +83,6 @@ jQuery(document).ready(function ($) {
         parseStateChangeVis();
     });
 
-
-
     if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect) {
         jQuery("#network").html(
 			'Sorry, this visualization uses the <a href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG standard</a>, most modern browsers support SVG.<br>If you would like to see this visualization please view this page in another browser such as <a href="https://www.google.com/chrome">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>, <a href="http://www.apple.com/safari/download/">Safari</a>, or <a href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie">Internet Explorer 9+</a>'
@@ -111,17 +109,15 @@ jQuery(document).ready(function ($) {
     $("#dynamicSearchClear").click(function () { $("#dynamicSearchInput").val(''); dynamicFilterList(); });
     $("#dynamicClear").click(function () { dynamicPeople = []; filter(); });
 
-    $("#network").fadeOut();
-    $("#workspace").hide();
+    //$("#network").fadeOut();
+    //$("#workspace").hide();
 
     windowResize();
 
     showSpinner("Loading<br>Triples");
 
-
-
-
     initalizeNetwork();
+    showConnections();
 
 
     //give the UI some breathing room, a chance to render

@@ -236,7 +236,7 @@ function getLinkStrength(d1, d2) {
 
 function showConnections() {
     $('#screen').hide();
-    $('#over').fadeOut(500);
+    //$('#over').fadeOut(500);
     $('#workspace').fadeIn(500);
     
     $('#show-button').fadeOut(1000);

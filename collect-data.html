@@ -11,33 +11,41 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
 
     <style>
-       
-        #over img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        /* centered columns styles */
+        .row-centered {
+            text-align: center;
         }
+
+        .col-centered {
+            display: inline-block;
+            float: none;
+            /* reset the text-align */
+            text-align: left;
+            /* inline-block space fix */
+            margin-right: -4px;
+        }
+
 
         /* Full Width Progress Bar */
 
         #content, #content2, #content3, #content1, #content4 {
-            width: 250px;
+            width: 700px;
             height: 2px;
             margin: 30px auto;
             background: #333;
         }
 
         .fullwidth .expand {
-            width: 250px;
-            height: 2px;
+            width: 700px;
+            height: 3px;
             margin: 2px 0;
             background: #2187e7;
             position: absolute;
             box-shadow: 0px 0px 10px 1px #89c1f6;
-            -moz-animation: fullexpand 5s ease-out;
-            -o-animation: fullexpand 5s ease-out;
-            -webkit-animation: fullexpand 5s ease-out;
-            animation: fullexpand 5s ease-out;
+            -moz-animation: fullexpand 9s ease-out;
+            -o-animation: fullexpand 9s ease-out;
+            -webkit-animation: fullexpand 9s ease-out;
+            animation: fullexpand 9s ease-out;
         }
 
         @-moz-keyframes fullexpand {
@@ -72,6 +80,8 @@
     </style>
     <script>
         $(function () {
+            $('#activateUmatch').hide();
+
             $('#header-attendees').text('49,236');
             $('#header-low').text('1,015,669');
             $('#header-medium').text('435,287');
@@ -80,14 +90,81 @@
             $('#header-meetings').text('293,039');
 
             $('#activateUmatch').click(function () {
-                window.location.href = "/collect-data.html";
+                window.location.href = "/index.html";
             });
+
+            setTimeout(function () {
+                $('#activateUmatch').show();
+                $('#activateUmatch').fadeIn(1500);
+            }, 9000);
+
+            setTimeout(function () {
+                $('#content').removeClass('fullwidth');
+                $('#content').removeClass('fullwidth').delay(10).queue(function (next) {
+                    $(this).addClass('fullwidth');
+                    next();
+                });
+                return false;
+            }, 1500);
+            setTimeout(function () {
+                $('#content1').removeClass('fullwidth');
+                $('#content1').removeClass('fullwidth').delay(10).queue(function (next) {
+                    $(this).addClass('fullwidth');
+                    next();
+                });
+                return false;
+            }, 1500);
+            setTimeout(function () {
+                $('#content2').removeClass('fullwidth');
+                $('#content2').removeClass('fullwidth').delay(10).queue(function (next) {
+                    $(this).addClass('fullwidth');
+                    next();
+                });
+                return false;
+            }, 1500);
+            setTimeout(function () {
+                $('#content3').removeClass('fullwidth');
+                $('#content3').removeClass('fullwidth').delay(10).queue(function (next) {
+                    $(this).addClass('fullwidth');
+                    next();
+                });
+                return false;
+            }, 1500);
+
+
+            setTimeout(function () {
+
+                $('#content4').removeClass('fullwidth');
+                $('#content4').removeClass('fullwidth').delay(10).queue(function (next) {
+                    $(this).addClass('fullwidth');
+                    next();
+                });
+                return false;
+            }, 2500);
+            setTimeout(function () {
+
+                $('#content4').removeClass('fullwidth');
+                $('#content4').removeClass('fullwidth').delay(10).queue(function (next) {
+                    $(this).addClass('fullwidth');
+                    next();
+                });
+                return false;
+            }, 7500);
+            setTimeout(function () {
+
+                $('#content4').removeClass('fullwidth');
+                $('#content4').removeClass('fullwidth').delay(10).queue(function (next) {
+                    $(this).addClass('fullwidth');
+                    next();
+                });
+                return false;
+            }, 12500);
         });
     </script>
 </head>
 
 <body>
-    
+
     <div id="header">
         <div class="row">
             <div class="col-md-2">
@@ -265,17 +342,79 @@
 
             </div>
         </div>
-        
+
 
         <button id="activateUmatch" style="position:absolute;left:24px;top:200px; z-index=2" class="btn btn-success btn-lg">Umatch...</button>
         <!--button style="position:absolute;left:24px;top:220px;" onclick="hideConnections()">Hide connections</button-->
+
+
+    </div>
+
+    <div class="row row-centered">
         
-
+        <div class="col-md-8 col-md-offset-2 col-centered">
+            <div id="loading" class="col-md-3">
+                <div class="row row-centered">
+                    <div class="col-md-12 col-centered">
+                        <h2>Collecting data...</h2>
+                    </div>
+                </div>
+                <div class="row row-centered" style="margin-top:30px;">
+                    <div class="col-md-4">
+                        <span style="display: inline-block;height: 100%;vertical-align: middle;"></span><img src="images/Loading/facebook.png" style="width:100px;vertical-align: middle;" />
+                    </div>
+                    <div class="col-md-6 col-md-offset-2 col-centered">
+                        <div id="content">
+                            <span class="expand"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <span style="display: inline-block;height: 100%;vertical-align: middle;"></span><img src="images/Loading/linkedin.png" style="width:100px;vertical-align: middle;" />
+                    </div>
+                    <div class="col-md-6 col-md-offset-2">
+                        <div id="content1">
+                            <span class="expand"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <span style="display: inline-block;height: 100%;vertical-align: middle;"></span><img src="images/Loading/twitter-logo.png" style="width:100px;vertical-align: middle;" />
+                    </div>
+                    <div class="col-md-6 col-md-offset-2">
+                        <div id="content2">
+                            <span class="expand"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <span style="display: inline-block;height: 100%;vertical-align: middle;"></span><img src="images/Loading/crunchbase.jpg" style="width:100px;vertical-align: middle;" />
+                    </div>
+                    <div class="col-md-6 col-md-offset-2">
+                        <div id="content3">
+                            <span class="expand"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2" style="height: 25px;width: 160px;white-space: nowrap;text-align: center; margin: 1em 0;">
+                        <h1><span class="label label-default">Other Sources...</span></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2">
+                        <div id="content4">
+                            <span class="expand"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
     </div>
-    <div id="over" style="position:absolute; width:100%; height:100%">
 
-        <img src="img/WS.png" />
-    </div>
-    
 </body>
 </html>
