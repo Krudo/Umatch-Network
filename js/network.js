@@ -172,6 +172,7 @@ jQuery(document).ready(function ($) {
 
     }, 200, []);
 
+    /********ZOOM WIDGET(START) *********/
 
     //add the zoom widget
     jQuery("#network").append(
@@ -245,7 +246,7 @@ jQuery(document).ready(function ($) {
 	    }
 	});
 
-
+    /********ZOOM WIDGET(END) *********/
 
 
 
@@ -299,6 +300,7 @@ function initalizeNetwork() {
     if (visMode == "person") {
         $('#loading').show();
     } else {
+        $('#btnMoveToIsotop').hide();
         $('#loading').hide();
     }
 
@@ -1138,7 +1140,7 @@ function restart() {
 	  .attr("x", function (d) { return (returnNodeSize(d) * -0.1); })
 	  .attr("y", function (d) { return returnNodeSize(d) + returnNodeSize(d) / 1.8; })
 
-	   .text(function (d) { return d.label; });
+	   //.text(function (d) { return d.label; });
 
 
     force.start();
@@ -1928,6 +1930,8 @@ function changeVisMode(changeTo) {
 
         $('#loading').show()
 
+
+        $('#btnMoveToIsotop').show();
         $('#btnMoveToIsotop').click(function () {
             window.location.href = "/index2.html";
         });
@@ -1998,6 +2002,7 @@ function changeVisMode(changeTo) {
 
 
     } else {
+        $('#btnMoveToIsotop').hide();
         $('#back-to-full-map').hide();
         //console.log(History);
         History.pushState({ state: changeTo }, document.title, "?mode=" + changeTo);
